@@ -1,0 +1,17 @@
+<ng-container [ngTemplateOutlet]="currentItem"></ng-container>
+
+<div class="footer">
+    <div class="actions">
+        <carousel-actions>
+            <button (click)="prevItem()" [disabled]="this.totalItems === 1">prev</button>
+            <button (click)="nextItem()" [disabled]="this.totalItems === 1">next</button>
+        </carousel-actions>
+    </div>
+    <div class="paginator">
+        <carousel-paginator
+            [totalItems]="this.totalItems"
+            [currentSelectedIndex]="currentIndex"
+        ></carousel-paginator>
+    </div>
+</div>
+
